@@ -1,0 +1,283 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+  width: 100%;
+  max-width: 650px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 70px 25px;
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.mainheading {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.mainheading h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: -1px;
+}
+
+
+/* =========================
+   SUB HEADING
+========================= */
+
+.subHeading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.subHeading h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #777;
+}
+
+
+/* =========================
+   INPUT AREA
+========================= */
+
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0 18px;
+  margin-bottom: 25px;
+
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.input input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-size: 16px;
+  color: #222;
+}
+
+.input input::placeholder {
+  color: #aaa;
+}
+
+.input i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+  background: #222;
+  color: #fff;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.input i:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   TODO CONTAINER
+========================= */
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================
+   TODO ITEM
+========================= */
+
+.todo {
+  width: 100%;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+  border-radius: 12px;
+
+  padding: 12px 16px;
+
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.todo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.left input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  accent-color: #222;
+}
+
+.left p {
+  font-size: 16px;
+  color: #333;
+}
+
+.checked{
+  color: #aaa;
+  font-size: small;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+  border-radius: 10px;
+
+  margin-right: 300px;
+}
+.result{
+  color: #f1f1f1;
+}
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+
+  color: #999;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.right i:hover {
+  background: #f1f1f1;
+  color: #222;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    padding: 45px 18px;
+  }
+
+  .mainheading h1 {
+    font-size: 34px;
+  }
+
+  .subHeading h2 {
+    font-size: 16px;
+  }
+
+  .input {
+    height: 54px;
+  }
+
+  .todo {
+    min-height: 56px;
+  }
+
+  .left p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL SCREENS
+========================= */
+
+@media (max-width: 380px) {
+
+  .app {
+    padding: 35px 14px;
+  }
+
+  .mainheading h1 {
+    font-size: 30px;
+  }
+
+  .input {
+    padding: 0 12px;
+  }
+
+  .todo {
+    padding: 10px 12px;
+  }
+}
